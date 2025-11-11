@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vijaya Institute of Technology for Women</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #f9fbff;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0, 51, 153, 0.95);
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 70px;
+      z-index: 1000;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffdd57;
+    }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(to right, #003399, #3366ff);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .hero button {
+      background-color: #fff;
+      color: #003399;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      background-color: #ffdd57;
+      transform: scale(1.05);
+    }
+
+    /* About Section */
+    .about {
+      padding: 100px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .about h2 {
+      color: #003399;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      color: #555;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* Departments */
+    .departments {
+      background: #f0f4ff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .departments h2 {
+      color: #003399;
+      margin-bottom: 40px;
+    }
+
+    .dept-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .dept {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .dept.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dept h3 {
+      color: #003399;
+      margin-bottom: 10px;
+    }
+
+    .dept:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Contact */
+    .contact {
+      background-color: #003399;
+      color: #fff;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .contact h2 {
+      margin-bottom: 20px;
+    }
+
+    .contact form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+    }
+
+    .contact button {
+      background-color: #ffdd57;
+      color: #003399;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .contact button:hover {
+      background-color: #fff;
+    }
+
+    footer {
+      background-color: #001f66;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+      }
+      .hero h2 {
+        font-size: 36px;
+      }
+      .dept {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Vijaya Institute of Technology for Women</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#departments">Departments</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <h2>Welcome to Vijaya Institute of Technology for Women</h2>
+    <p>Empowering women through education, innovation, and leadership in technology and engineering.</p>
+    <button onclick="showMessage()">Explore More</button>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <h2>About Our College</h2>
+    <p>
+      Vijaya Institute of Technology for Women (VITW) is a leading institution committed to promoting academic excellence and women empowerment through quality education. 
+      The college focuses on holistic development by combining technical expertise, research, and innovation. 
+      VITW provides a supportive environment for women to achieve success in engineering and technology fields.
+    </p>
+  </section>
+
+  <!-- Departments -->
+  <section class="departments" id="departments">
+    <h2>Our Branches</h2>
+    <div class="dept-container">
+      <div class="dept">
+        <h3>Information Technology</h3>
+        <p>Focused on software development, databases, and modern web technologies.</p>
+      </div>
+      <div class="dept">
+        <h3>Computer Science Engineering</h3>
+        <p>Emphasizes algorithms, programming, artificial intelligence, and systems design.</p>
+      </div>
+      <div class="dept">
+        <h3>Electronics and Communication Engineering (ECE)</h3>
+        <p>Specializes in circuits, communication systems, and embedded technologies.</p>
+      </div>
+      <div class="dept">
+        <h3>Data Science</h3>
+        <p>Integrates data analytics, machine learning, and decision-making systems.</p>
+      </div>
+      <div class="dept">
+        <h3>Artificial Intelligence & Machine Learning (AIML)</h3>
+        <p>Explores intelligent computing, automation, and deep learning technologies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="return submitForm()">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Vijaya Institute of Technology for Women | Designed by You</p>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function showMessage() {
+      alert("Welcome to Vijaya Institute of Technology for Women! Explore our academic programs and departments.");
+    }
+
+    function submitForm() {
+      alert("Thank you for contacting Vijaya Institute of Technology for Women. We will respond shortly.");
+      return false;
+    }
+
+    // Animation for department boxes
+    window.addEventListener("scroll", () => {
+      const depts = document.querySelectorAll(".dept");
+      depts.forEach(dept => {
+        const top = dept.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          dept.classList.add("show");
+        }
+      });
+    });
+  </script>
+</body>
+</html>
